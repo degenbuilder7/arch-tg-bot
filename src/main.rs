@@ -1,10 +1,3 @@
-use teloxide::prelude::*;
-use teloxide::types::{ InlineKeyboardButton, InlineKeyboardMarkup, ParseMode };
-use base64::Engine;
-use std::env;
-use log::LevelFilter;
-use reqwest;
-
 #[cfg(not(feature = "library"))]
 use cosmwasm_std::entry_point;
 use cosmwasm_std::{
@@ -16,6 +9,10 @@ use sha2::{Digest, Sha256};
 use cw2::set_contract_version;
 use cw20::{Balance, Cw20Coin, Cw20CoinVerified, Cw20ExecuteMsg, Cw20ReceiveMsg};
 
+pub mod error;
+pub mod msg;
+pub mod state;
+
 use crate::error::ContractError;
 use crate::msg::{
     is_valid_name, BalanceHuman, CreateMsg, DetailsResponse, ExecuteMsg, InstantiateMsg,
@@ -23,6 +20,13 @@ use crate::msg::{
 };
 use crate::state::{all_swap_ids, AtomicSwap, SWAPS};
 use cw_storage_plus::Bound;
+
+use teloxide::prelude::*;
+use teloxide::types::{ InlineKeyboardButton, InlineKeyboardMarkup, ParseMode };
+use base64::Engine;
+use std::env;
+use log::LevelFilter;
+use reqwest;
 
 // Version info, for migration info
 const CONTRACT_NAME: &str = "crates.io:cw20-atomic-swap";

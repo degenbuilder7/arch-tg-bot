@@ -3,27 +3,6 @@
 version = 3
 
 [[package]]
-name = "Rust_Telegram_Bot"
-version = "0.1.0"
-dependencies = [
- "base64 0.22.1",
- "cosmwasm-schema",
- "cosmwasm-std",
- "cw-storage-plus",
- "cw-utils",
- "cw2",
- "cw20",
- "env_logger",
- "hex 0.3.2",
- "log",
- "reqwest 0.12.5",
- "sha2 0.8.2",
- "teloxide",
- "thiserror",
- "tokio",
-]
-
-[[package]]
 name = "addr2line"
 version = "0.22.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -118,6 +97,27 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 1.0.109",
+]
+
+[[package]]
+name = "archway_rust_telegram_bot"
+version = "0.1.0"
+dependencies = [
+ "base64 0.22.1",
+ "cosmwasm-schema",
+ "cosmwasm-std",
+ "cw-storage-plus",
+ "cw-utils",
+ "cw2",
+ "cw20",
+ "env_logger",
+ "hex 0.3.2",
+ "log",
+ "reqwest 0.12.5",
+ "sha2 0.8.2",
+ "teloxide",
+ "thiserror",
+ "tokio",
 ]
 
 [[package]]

@@ -19,12 +19,12 @@ This is a simple yet powerful Telegram bot written in Rust using the [`teloxide`
 
 1. Clone the repository:
     ```sh
-    git clone 
+    git clone https://github.com/degenbuilder7/arch-tg-bot
     ```
 
 2. Set up your environment variables:
     ```sh
-    export TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+    export TELEGRAM_BOT_TOKEN=7215566153:AAGqraXYk6RW5wKC8h2V_uK2A_As5GbMbQU
     ```
 
 3. Build and run the bot:
@@ -36,6 +36,8 @@ This is a simple yet powerful Telegram bot written in Rust using the [`teloxide`
 ## Usage
 
 Once the bot is running, you can interact with it on Telegram. Send a message to the bot, and it will respond with a dynamically generated URL based on the message content and user status.
+
+Now you can trade directly on archway from your mobile using archtradingbot
 
 ## Code Overview
 
