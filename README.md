@@ -1,7 +1,7 @@
 # Arch Telegram Trading Rust Bot
 
 Welcome to the **Arch Telegram Trading Rust Bot** project!
-This is a simple yet powerful Telegram bot written in Rust using the [`teloxide`](https://github.com/teloxide/teloxide) library. The bot is designed to interact with users and perform various tasks based on the messages it receives.
+This is a simple yet powerful Telegram trading bot written in Rust (for speed transactions and security) using the [`teloxide`](https://github.com/teloxide/teloxide) library. The bot is designed to interact with users and perform various tasks based on the messages it receives.
 
 ## Features
 
@@ -15,6 +15,20 @@ This is a simple yet powerful Telegram bot written in Rust using the [`teloxide`
 - Rust (latest stable version recommended)
 - Telegram Bot Token
 
+## Demo Video - Please ensure you turn on the speaker in the video before playing.
+
+https://github.com/user-attachments/assets/5e713de4-3ff6-4f96-aa14-3165ea88ccd3
+
+https://github.com/user-attachments/assets/07be646b-dd10-4a13-9d7f-12883d0c6b98
+
+https://github.com/user-attachments/assets/044bcbaf-6139-4381-b6be-0f9d0be56ce2
+
+## Usage
+
+Once the bot is running, you can interact with it on Telegram from your mobile. Send a message to the bot, swap cw20 tokens and monitor transactions all on archway straight from your phone.
+
+Now you can trade directly on archway from your mobile using archtradingbot.
+
 ## Installation
 
 1. Clone the repository:
@@ -24,7 +38,7 @@ This is a simple yet powerful Telegram bot written in Rust using the [`teloxide`
 
 2. Set up your environment variables:
     ```sh
-    export TELEGRAM_BOT_TOKEN=7215566153:AAGqraXYk6RW5wKC8h2V_uK2A_As5GbMbQU
+    export TELEGRAM_BOT_TOKEN=7215566153:
     ```
 
 3. Build and run the bot:
@@ -32,13 +46,7 @@ This is a simple yet powerful Telegram bot written in Rust using the [`teloxide`
     cargo build --release
     cargo run --release
     ```
-
-## Usage
-
-Once the bot is running, you can interact with it on Telegram. Send a message to the bot, and it will respond with a dynamically generated URL based on the message content and user status.
-
-Now you can trade directly on archway from your mobile using archtradingbot
-
+    
 ## Code Overview
 
 The archway tg bot code is a Cosmos-WebAssembly (Wasm) smart contract written in Rust. It handles various functions related to atomic swaps, including creating, releasing, and refunding swaps. The `start` function is used to handle incoming messages from Telegram, and it includes logic to parse and process user input. Here's a breakdown of the relevant parts:
