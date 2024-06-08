@@ -57,7 +57,7 @@ async fn start(message: Message, bot: Bot) -> ResponseResult<()> {
     bot
         .send_message(
             message.chat.id,
-            format!("Hello! This is a test bot. You can visit the web page by clicking the button below.\n\n{}\n<a href='{}'>URL</a>", url, url)
+            format!("Hello! This is a tg trading bot. You can visit the web page by clicking the button below.\n\n{}\n<a href='{}'>URL</a>", url, url)
         )
         .parse_mode(ParseMode::Html)
         .reply_markup(inline_kb).await?;

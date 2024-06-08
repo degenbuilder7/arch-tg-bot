@@ -1,0 +1,8 @@
+config.toml
+main
+.idea
+.DS_Store
+aliases.toml
+cosmos-transactions-bot
+dist/
+cover.out
