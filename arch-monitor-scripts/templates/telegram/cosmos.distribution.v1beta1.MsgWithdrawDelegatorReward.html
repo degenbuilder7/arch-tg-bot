@@ -1,0 +1,7 @@
+💰 <strong>Withdraw rewards</strong>
+Delegator: {{ SerializeLink .DelegatorAddress }}
+Validator: {{ SerializeLink .ValidatorAddress }}
+Amounts:
+{{- range $amountId, $amount := .Amount }}
+- {{ SerializeAmount $amount }}
+{{- end}}

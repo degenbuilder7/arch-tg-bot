@@ -1,0 +1,19 @@
+💸 <strong>New transaction on chain {{ .Chain.GetName }}</strong>
+Hash: {{ SerializeLink .Reportable.Hash }}
+Height: {{ SerializeLink .Reportable.Height }}
+{{- if .ChainSubscription.LogFailedTransactions }}
+{{- if not .Reportable.Code }}
+Status: 👌 Success
+{{- else }}
+Status: ❌ Failure
+Error: <code>{{ .Reportable.Log }}</code>
+{{- end }}
+{{- end }}
+{{- if .Reportable.Memo }}
+Memo: {{ .Reportable.Memo }}
+{{- end }}
+
+Messages ({{ .Reportable.GetMessagesLabel }}):
+{{- range $msgId, $msg := .Reportable.Messages }}
+{{ SerializeMessage $msg }}
+{{- end }}

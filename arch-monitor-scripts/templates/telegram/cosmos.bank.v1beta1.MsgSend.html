@@ -1,0 +1,7 @@
+💵 <strong>Transfer</strong>
+From: {{ SerializeLink .From }}
+To: {{ SerializeLink .To }}
+Amounts:
+{{- range $amountId, $amount := .Amount }}
+- {{ SerializeAmount $amount }}
+{{- end}}

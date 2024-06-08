@@ -1,0 +1,11 @@
+<strong>Nodes status</strong>
+{{ range $chainId, $chain := . }}
+<strong>Chain {{ $chainId }}:</strong>
+{{- range $node, $status := $chain }}
+{{- if $status.Success }}
+🟢 <code>{{ $node }}</code> -> active
+{{- else }}
+🔴 <code>{{ $node }}</code> -> not active: {{ $status.Error }}
+{{- end }}
+{{- end }}
+{{ end }}
